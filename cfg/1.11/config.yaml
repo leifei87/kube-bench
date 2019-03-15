@@ -23,7 +23,8 @@ master:
 node:
   kubelet:
     defaultconf: /etc/kubernetes/kubelet.conf
-    defaultsvc: /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
-
+    defaultsvc: /etc/systemd/system/kubelet.service
+    defaultkubeconfig: /var/lib/kubelet/kubeconfig
   proxy:
     defaultconf: /etc/kubernetes/addons/kube-proxy-daemonset.yaml
+    defaultkubeconfig: /var/lib/kubelet/kubeconfig
